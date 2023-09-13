@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Add your CSS styling here */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0; /* Light gray background */
+        }
+        
+        header {
+            background-color: #3498db; /* Blue header background */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #2980b9; /* Slightly darker blue border */
+        }
+        
+        header h1 {
+            margin: 0;
+            color: #ffffff; /* White header text */
+            font-size: 2.5rem;
+        }
+        
+        header p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #b0b0b0; /* Light gray header text */
+        }
+        
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333; /* Darker text color */
+            animation: fadeIn 1.5s ease-out; /* Apply the animation to the main section */
+        }
+        
+        main h2 {
+            color: #e67e22; /* Bright orange heading color */
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        main p {
+            font-size: 1.1rem;
+        }
+        
+        a {
+            color: #3498db; /* Blue link color */
+            text-decoration: none;
+        }
+        
+        /* Add more vibrancy to the link */
+        a:hover {
+            color: #e67e22; /* Bright orange on hover */
+        }
+        
+        footer {
+            background-color: #333; /* Darker footer background */
+            color: #ffffff; /* White footer text */
+            text-align: center;
+            padding: 10px;
+        }
+        
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        /* Add these CSS rules for animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Resume</h1>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="About.html">About</a> 
+    </nav>
+</header>
+
+<main>
+    <h2>Resume</h2>
+    <p>Here you can download my resume:</p>
+    <i class="fas fa-briefcase"></i> <!-- Add the icon here -->
+    <a href="resume.pdf" download>Download Resume (PDF)</a>
+</main>
+
+<footer>
+    <p>&copy; Deena Marina Dsouza. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

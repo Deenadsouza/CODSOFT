@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>gallery</title>
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+        }
+        .header {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background-color:white;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .heading h3 {
+            font-size: 36px;
+            color: white;
+        }
+        
+        .heading span {
+            color: #ff6600;
+        }
+        
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .dream {
+            width: 20%;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        
+        .dream img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 40px /* Adjust this value to change the padding */
+}
+
+        
+        .dream img:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .btn a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .btn a:hover {
+            background-color: #e55300;
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: calc(100% - 20px);
+        }
+
+        .icon {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .icon:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1> Welcome To My Photo Gallery</h1>
+    </div> 
+    <div class="container">
+        <div class="heading">
+            <h3>Photo <span>Gallery</span></h3>
+        </div>
+        <div class="box">
+            <div class="dream">
+                <img src="1.jpg">
+                <img src="2.jpg">
+                <img src="3.jpg">
+                <img src="4.jpg">
+                <img src="5.jpg">
+            </div>
+            <div class="dream">
+                <img src="6.jpg">
+                <img src="7.jpg">
+                <img src="8.jpg">
+                <img src="9.jpg">
+                <img src="10.jpg">
+            </div>
+            <div class="dream">
+                <img src="11.jpg">
+                <img src="12.jpg">
+                <img src="13.jpg">
+                <img src="14.jpg">
+                <img src="15.jpg">
+            </div>
+        </div>
+        <div class="btn">
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; Deena Marina Dsouza. All rights reserved.</p>
+    </div>
+</body>
+</html>

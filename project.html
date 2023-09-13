@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        /* Reset default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            margin: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeInContainer {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .btn a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .btn a:hover {
+            background-color: #e55300;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure container takes at least the full viewport height */
+            margin: 0 auto;
+            padding: 0 1rem;
+            max-width: 1200px;
+            animation: fadeInContainer 1s ease-in-out;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 4px solid #ff9900;
+        }
+        .project-container {
+            display: flex;
+            gap: 2rem; /* Add spacing between project boxes */
+            flex-wrap: wrap; /* Allow projects to wrap to the next line */
+            justify-content: center; /* Center projects horizontally */
+        }
+        .project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 2rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 300px; /* Limit the width of each project box */
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .project h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        @keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project p.animate-text {
+            opacity: 1; /* Start with opacity to make text visible */
+            transform: translateY(0); /* Start without any translateY transform */
+            animation: fadeInText 1.5s ease-in-out forwards; /* Apply animation */
+            animation-delay: 0.5s; /* Delay the animation */
+            white-space: normal; /* Allow line breaks */
+            width: auto; /* Reset width to auto for normal text display */
+        }
+
+        
+        
+        /* Create a spacer that pushes the footer to the bottom */
+        .spacer {
+            flex-grow: 1;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            border-top: 4px solid #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Portfolio</h1>
+            <p>Welcome to my collection of projects.</p>
+        </header>
+        <div class="project-container">
+            <section class="project">
+                <h2>Project 1</h2>
+                <h4><u>Railway Reservation System</u></h4><br>
+                <div>
+                    <img src="project1.jpeg" alt="Project 1">
+                    <p>Railway Reservation System is a web-based application used for booking tickets online.This web-based application for railway reservation can be accessed by both railway department and general public .</p>
+                <br>
+                <a href="project1.pdf" target="_blank">Railway Reservation System.pdf</a>
+                </div>
+            </section>
+            <section class="project">
+                <h2>Project 2</h2>
+                <h4><u>Environmental Pollution</u></h4><br>
+                <div>
+                    <img src="project2.jpeg" alt="Project 2">
+                    <p>Environmental Pollution is a project that aims to raise awareness about environmental pollution by utilizing the OpenGL GLUT library to create a visually immersive and interactive simulation.</p>
+                <br>
+                <a href="project2.pdf" target="_blank">Environmental Pollution.pdf</a>
+                </div>
+            </section>
+            <section class="project">
+                <h2>Project 3</h2>
+                <h4><u>Weather App</u></h4><br>
+                <div>
+                    <img src="project3.png" alt="Project 3">
+                    <p>The weather app is a mobile application desgined to provide user with comprehenisve weather information,including deatils about sunrise and sunset times,wind speed and atmospheric pressure.</p>
+                <br>
+                <a href="project3.pdf" target="_blank">Weather App.pdf</a>
+                </div>
+            </section>
+            <!-- Add more project sections as needed -->
+        </div>
+        <div class="btn">
+            <a href="index.html">Home</a>
+        </div>
+        <div class="spacer"></div>
+        <footer>
+            <p>&copy; 2023 Deena Marina Dsouza. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+       const projects = document.querySelectorAll('.project p');
+        projects.forEach(project => {
+            const words = project.textContent.split(' ');
+            const spannedWords = words.map(word => `<span>${word}</span>`);
+            project.innerHTML = spannedWords.join(' ');
+        });
+    
+        // Calculate the width of each word and set it as width to reveal word by word
+        projects.forEach(project => {
+            const wordSpans = project.querySelectorAll('span');
+            wordSpans.forEach(span => {
+                // Calculate the width using getBoundingClientRect() to consider padding
+                const width = span.getBoundingClientRect().width + 'px';
+                span.style.width = width;
+            });
+            
+            // Trigger animation after updating span widths
+            project.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>

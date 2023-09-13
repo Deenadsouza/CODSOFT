@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url("index.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: #555;
+            text-align: center;
+            padding: 20px 0; /* Add padding to top and bottom */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px; 
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Make the list items horizontal */
+        }
+        .navbar ul li {
+            padding: 10px 50px;
+        }
+        .navbar ul li a {
+            color: wheat;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        .navbar ul li a:hover {
+            color: lightcyan;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <header class="fade-in">
+        <h1 style="margin: 0;">Deena Marina Dsouza</h1> 
+    </header>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="Photogallery.html">Photogallery</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <section class="home fade-in" style="margin-top: 20px; text-align: center; font-size: larger; padding: 20px;display: flex; justify-content: center; align-items: center; height: 40vh;">
+        <h2><i>Welcome to My Portfolio</i></h2>
+    </section>
+    <footer>
+        <p>&copy; Deena Marina Dsouza. All rights reserved.</p><br>
+        <p>2023</p>
+        <p id="server-time">Server Time: Loading...</p>
+        <p>Total Visitors: <span id="total-visitors">Loading...</span></p>
+    </footer>
+    <script>
+         // Function to update server time
+    function updateServerTime() {
+        const serverTimeElement = document.getElementById("server-time");
+        setInterval(() => {
+            const serverTime = new Date().toLocaleString();
+            serverTimeElement.textContent = `Server Time: ${serverTime}`;
+        }, 1000); // Update every second
+    }
+
+    // Function to update and store total visitors
+    function updateTotalVisitors() {
+        const totalVisitorsElement = document.getElementById("total-visitors");
+        let totalVisitors = parseInt(localStorage.getItem("totalVisitors")) || 0;
+        totalVisitors++;
+        localStorage.setItem("totalVisitors", totalVisitors);
+        totalVisitorsElement.textContent = totalVisitors;
+    }
+
+    // Initial function to set up page
+    function initializePage() {
+        updateServerTime();
+        updateTotalVisitors();
+    }
+
+    // Call the initial function
+    initializePage();
+
+        // Add fade-in animation to elements
+        const header = document.querySelector("header");
+        const homeSection = document.querySelector(".home");
+
+        header.classList.add("fade-in");
+        homeSection.classList.add("fade-in");
+
+        // Smooth scroll to section when clicking navigation links
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                const targetSectionId = link.getAttribute("href");
+                const targetSection = document.querySelector(targetSectionId);
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
+</body>
+</html>

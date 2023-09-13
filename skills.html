@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+            body, h1, h2, ul, li, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Typography */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-image:url("skill.png");
+        }
+
+        /* Header */
+        header {
+            background-color:lightcoral; /* Change to your preferred color */
+            color: black;
+            text-align: center;
+            padding: 1.5rem 0; /* Adjust padding for better spacing */
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+
+        /* Container */
+        .container {
+            width: 100%;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .fas, .far, .fab {
+            font-size: 30px;
+            color: #007bff;
+        }
+        /* Sections */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        /* List styles */
+        ul {
+            list-style: none;
+        }
+
+        /* Image container */
+        .img-container {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 1rem;
+        }
+
+        /* Achievements images */
+        .achieve-list img,
+        .cert-list img {
+            max-width: 100px;
+            height: auto;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Horizontal line after certification */
+        .cert-list li {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Certification icon */
+        .cert-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #333;
+        }
+        .skill-list li,
+        .cert-list li,
+        .achieve-list li {
+            animation: fadeInLeft 1s ease-in-out;
+        }
+        .cert-list,
+        .achieve-list {
+            padding: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color:#333;
+            border-top: 1px solid #ccc;
+            font-size: 0.8rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* Block styling */
+        .block {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .block h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Notification styles */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            z-index: 999;
+        }
+        .center-button {
+    text-align: center;
+}
+.home-button {
+    text-decoration: none; /* Remove the underline */
+    color: black; /* Set the text color to red */
+    background-color: lemonchiffon; /* Set the background color to yellow */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.home-button:hover {
+    background-color: lavenderblush; /* Change the background color on hover to orange */
+}
+@keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+    <title>My Skills</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 style="font-size: 2rem;">My Skills, Achievements, and Certifications</h1>
+    </header>
+    <div class="container">
+        <div class="block">
+            <h2><i class="fas fa-laptop-code"></i> Skills</h2>
+                    <ul class="skill-list">
+                        <ul><b>Programming Languages:</b></ul>
+                        <li><i class="fab fa-cuttlefish"></i> -C</li>
+                        <li><i class="fab fa-cuttlefish"></i> -C++</li>
+                        <li><i class="fab fa-python"></i>- Python</li>
+                        <li><i class="fab fa-html5"></i> -HTML</li>
+                        <br>
+                        <ul><b>Database:</b></ul>
+                        <li><i class="fas fa-database"></i> -MySQL</li>
+                        <br>
+                        <ul><b>Soft Skills:</b></ul>
+                        <li><i class="fas fa-check-circle"></i> -Decision Making</li>
+                        <li><i class="fas fa-lightbulb"></i> -Problem Solving</li>
+                        <li><i class="fas fa-users"></i> -Team Participation</li>
+                        <br>
+                        
+                        <ul><b>Specialties:</b></ul>
+                        <li><i class="far fa-clock"></i> -Time Management</li>
+                        <li><i class="fas fa-book"></i> -Learning New Things</li>
+            </ul>
+        </div>
+        </div>
+        <div class="block">
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <ul class="cert-list">
+                <li>
+                    <div class="img-container">
+                        <img src="Data Structures.jpg" alt="Data Structures Certification">
+                    </div>
+                    Data Structures Certification
+                    <div>
+                        <a href="Data Structures.jpg" download data-icon="fas fa-download" data-message="Image downloaded">Download Image</a> |
+                        <a href="Data Structures.pdf" download data-icon="fas fa-download" data-message="PDF downloaded">Download PDF</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="Software Sequrity.jpg" alt="Software Security Certification">
+                    </div>
+                    Software Security Certification
+                    <div>
+                        <a href="Software Sequrity.jpg" download data-icon="fas fa-download" data-message="Image downloaded">Download Image</a> |
+                        <a href="Software Sequrity.pdf" download data-icon="fas fa-download" data-message="PDF downloaded">Download PDF</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="Excel for Beginners.jpg" alt="Excel For Beginners Certification">
+                    </div>
+                    Excel For Beginners Certification
+                    <div>
+                        <a href="excel for beginners.jpg" download data-icon="fas fa-download" data-message="Image downloaded">Download Image</a> |
+                        <a href="excel for beginners.pdf" download data-icon="fas fa-download" data-message="PDF downloaded">Download PDF</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="Front End Development-HTML.jpg" alt="Front End Development-HTML Certification">
+                    </div>
+                    Front End Development-HTML Certification
+                    <div>
+                        <a href="front end development-html.jpg" download data-icon="fas fa-download" data-message="Image downloaded">Download Image</a> |
+                        <a href="front end development-html.pdf" download data-icon="fas fa-download" data-message="PDF downloaded">Download PDF</a>
+                    </div>
+                </li>
+                <!-- Add more certifications here -->
+            </ul>
+        </div>
+        </div>
+
+        <!-- Achievements Block -->
+        <div class="block">
+            <h2><i class="fas fa-trophy"></i> Achievements</h2>
+            <ul class="achieve-list">
+               <ul><b><i class="fas fa-award"></i> Co-Curricular Achievements</b></ul><br>
+               <li>* Received certificate of merit by St. Agnes PU College for securing distinction in Kannada and religion.</li>
+            <li>* Received certificate of merit by Mangala Jyothi.</li>
+            <li>* Received certificate of merit for completing state level ‘Navodhaya’ examination.</li>
+        <br>
+        <ul><b><i class="fas fa-star"></i> Extra Curricular Achievements</b></ul><br>
+        <li>* Participated in State level Singing Competition and received 3rd place.</li>
+        <li>* 3rd place in quiz competition.</li>
+        <li>* Member of the College Eco club.</li>
+        <li>* Was the Health minister in Nithyadhar English medium school and was responsible for the discipline of 800+ students.</li>
+        <li>* Volunteered in Beach cleaning program.</li>
+        <li>* Visited schools as part of an Aicte activity and taught kids about the fundamentals of computer</li>
+        <li>* Participated in debate competition.</li>    
+        </ul>
+        </div>
+        </div>
+
+        <div class="center-button">
+            <a href="index.html" class="home-button">Home</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; Deena Marina Dsouza. All rights reserved.
+    </footer>
+    <script>
+        function showNotification(iconClass, message) {
+            const notification = document.createElement("div");
+            notification.className = "notification";
+    
+            const icon = document.createElement("span");
+            icon.className = iconClass;
+            icon.style.marginRight = "10px";
+    
+            const text = document.createElement("span");
+            text.textContent = message;
+    
+            notification.appendChild(icon);
+            notification.appendChild(text);
+    
+            document.body.appendChild(notification);
+    
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 5000); // Hide the notification after 5 seconds
+        }
+    
+        const downloadLinks = document.querySelectorAll("[download]");
+        downloadLinks.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+    
+                const iconClass = this.getAttribute("data-icon");
+                const message = this.getAttribute("data-message");
+                const downloadUrl = this.getAttribute("href");
+    
+                // Open the downloaded item in a new window/tab
+                const newWindow = window.open(downloadUrl, "_blank");
+    
+                // Close the new window/tab after 3 seconds (adjust as needed)
+                setTimeout(() => {
+                    newWindow.close();
+    
+                    // Show notification on original skills page
+                    showNotification("fas fa-download", "Download complete");
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
